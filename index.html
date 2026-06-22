@@ -75,9 +75,9 @@
         .progress-bar { height: 100%; width: 0%; background: var(--primary); box-shadow: 0 0 15px var(--primary); transition: width 0.3s ease-out; }
         .loading-status { color: var(--text-muted); font-size: 0.85rem; letter-spacing: 1px; font-family: monospace; margin-bottom: 25px; }
 
-        /* 🚪 進入網站按鈕（跑滿 100% 才會由 JavaScript 切換顯示） */
+        /* 🚪 進入網站按鈕（初始隱藏，滿 100% 才由 JS 開啟） */
         #enter-btn {
-            display: none; /* 初始完全隱藏 */
+            display: none;
             padding: 14px 45px;
             background: rgba(0, 210, 255, 0.08);
             border: 2px solid var(--primary);
@@ -98,11 +98,7 @@
             box-shadow: 0 0 30px var(--primary);
             transform: scale(1.03);
         }
-        #enter-btn i {
-            color: inherit; /* 讓按鈕內的圖標顏色跟著文字走 */
-            filter: none;
-            margin-right: 8px;
-        }
+        #enter-btn i { color: inherit; filter: none; margin-right: 8px; }
         @keyframes fadeInBtn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
@@ -296,11 +292,11 @@
 
     <div class="stats-bar">
         <div class="stat-item">
-            <span class="stat-number">5+</span>
+            <span class="stat-number">7+</span>
             <span class="stat-label">保護的伺服器</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">50+</span>
+            <span class="stat-number">80+</span>
             <span class="stat-label">保護的使用者</span>
         </div>
         <div class="stat-item">
@@ -312,7 +308,7 @@
             <span class="stat-label">在線時間</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">70+</span>
+            <span class="stat-number">90+</span>
             <span class="stat-label">已攔截攻擊</span>
         </div>
     </div>
@@ -365,9 +361,17 @@
 
         <section id="absolute-power">
             <h2 class="section-title">絕對霸權 防禦機制100%</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-top: -40px; margin-bottom: 60px; font-size: 1.1rem;">
+            <p style="text-align: center; color: var(--text-muted); margin-top: -40px; margin-bottom: 40px; font-size: 1.1rem;">
                 這不只是矛，也是盾。我們保護的社群。
             </p>
+
+            <div class="zy-banner" style="border-color: var(--secondary); background: linear-gradient(90deg, rgba(255,0,193,0.1) 0%, rgba(5,8,16,0.5) 100%); margin-bottom: 50px;">
+                <p style="color: #fff; font-size: 1.3rem; font-weight: bold; margin: 0;">
+                    <i class="fas fa-brain" style="color: var(--secondary); font-size: 1.5rem; margin-right: 10px;"></i>
+                    我們使用 "AI演算法" 來找出隱藏在伺服器的內鬼！
+                </p>
+            </div>
+
             <div class="grid">
                 <div class="card">
                     <span class="card-icon"><i class="fas fa-shield-halved"></i></span>
@@ -383,6 +387,16 @@
                     <span class="card-icon"><i class="fas fa-comment-slash"></i></span>
                     <h3>反刷屏引擎</h3>
                     <p>搭載 C9C 防護思考引擎，基於滑動視窗演算法精準攔截高頻發言，支援階梯式處罰 (警告->禁言->踢出)。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><i class="fas fa-robot"></i></span>
+                    <h3>炸群SelfBot防禦</h3>
+                    <p>辨識並處理自動化使用者帳號 (SelfBot) 的惡意行為，預防潛在威脅，讓自動化惡意帳號無所遁形。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><i class="fas fa-download"></i></span>
+                    <h3>炸群UserInstall防禦</h3>
+                    <p>防止使用者安裝惡意應用程式或腳本，建立嚴密的客戶端隔離壁壘，從源頭杜絕安全漏洞。</p>
                 </div>
             </div>
         </section>
@@ -429,7 +443,7 @@
                 <div class="card">
                     <span class="card-icon"><i class="fas fa-ghost"></i></span>
                     <h3>防無痕滲透 (Anti-STEALTH)</h3>
-                    <p>發送隱形的 @everyone 後瞬間刪除，讓所有人收到通知卻找不到來源。</p>
+                    <p>隱形的 @everyone 後瞬間刪除，讓惡意發送者找不到來源。我們在幽靈攻擊的即時防禦是非常強大的！</p>
                 </div>
                 <div class="card">
                     <span class="card-icon"><i class="fas fa-cubes"></i></span>
@@ -499,7 +513,7 @@
 
                 <h3>4. 免責聲明與責任限制 (Limitation of Liability) <i class="fas fa-shield-halved"></i></h3>
                 <ul>
-                    <li><strong>現狀提供 (As-Is)：</strong>本機器人依「如實提供」基礎運作。我們不對其運作的準確性、穩定性或功能完整性提供 any 形式的明示或默示保證。</li>
+                    <li><strong>現狀提供 (As-Is)：</strong>本機器人依「如實提供」基礎運作。我們不對其運作的準確性、穩定性或功能完整性提供任何形式的明示或默示保證。</li>
                     <li><strong>無賠償責任：</strong>若因使用本機器人導致任何形式的損害（例如帳號遭封禁、伺服器資料損失、設定遺失等），暐式科技不負任何法律責任。</li>
                     <li><strong>誤判風險：</strong>自動化防禦系統可能存在誤判。伺服器管理員應自行承擔啟用自動化處置（如自動踢出、自動刪除訊息）的風險。</li>
                 </ul>
@@ -552,7 +566,7 @@
     </div>
 
     <script>
-        // ⏳ 載入畫面控制與音樂播放控制腳本
+        // ⏳ 載入控制與點擊按鈕同步播放背景音樂
         document.addEventListener('DOMContentLoaded', () => {
             const preloader = document.getElementById('preloader');
             const progressBar = document.querySelector('.progress-bar');
@@ -562,15 +576,15 @@
             const audio = document.getElementById('bg-audio');
 
             const loadSteps = [
-                { percent: 15, text: '載入核心模組...' },
-                { percent: 35, text: '初始化防禦矩陣...' },
-                { percent: 55, text: '建立安全連線...' },
-                { percent: 75, text: '同步 Discord API 限制...' },
-                { percent: 90, text: '驗證 C9C 引擎...' },
-                { percent: 100, text: '系統就緒。請確認進入。' }
+                { percent: 15, text: '載入核心防禦模組...' },
+                { percent: 35, text: '同步 AI 內鬼檢測演算法...' },
+                { percent: 55, text: '建立安全非阻塞 Asyncio 連線...' },
+                { percent: 75, text: '防禦矩陣就緒 (SelfBot & UserInstall 已部署)...' },
+                { percent: 90, text: '同步 C9C 思考引擎 & 幽靈攻擊實時攔截庫...' },
+                { percent: 100, text: '系統已部署就緒。請手動確認進入系統。' }
             ];
 
-            document.body.style.overflow = 'hidden'; // 強制鎖定主頁面滾動
+            document.body.style.overflow = 'hidden'; // 鎖定滾動
             let currentStep = 0;
 
             function updateLoader() {
@@ -586,32 +600,30 @@
                     if (currentStep === loadSteps.length) { nextDelay = 400; }
                     setTimeout(updateLoader, nextDelay);
                 } else {
-                    // 當進度走到最右邊 100% 的時候
+                    // 滿 100% (走到最右邊時)
                     setTimeout(() => {
-                        // 🚪 修正：讓按鈕順利在畫面上顯示為區塊，並套用淡入動畫
-                        enterBtn.style.display = 'block';
+                        enterBtn.style.display = 'block'; // 顯現「進入系統」按鈕
                     }, 200);
                 }
             }
             
-            // 🚪 監聽「進入系統」按鈕的點擊事件
+            // 🚪 點擊按鈕：進入網站 + 同時播放背景音樂
             enterBtn.addEventListener('click', () => {
-                // 1. 同時播放背景音訊
                 if (audio) {
                     audio.play().catch(err => {
-                        console.log("音訊播放被瀏覽器核心限制保護:", err);
+                        console.log("音訊播放受瀏覽器核心限制阻擋:", err);
                     });
                 }
 
-                // 2. 啟動 Preloader 淡出動畫
+                // 啟動淡出動畫
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
                 
-                // 3. 解除主網頁滾動鎖定
+                // 解除主頁面滾動鎖定
                 document.body.style.overflow = ''; 
             });
 
-            // 啟動加載計時器
+            // 啟動進度條
             setTimeout(updateLoader, 300);
         });
 
@@ -640,5 +652,3 @@
     </script>
 </body>
 </html>
-
-
